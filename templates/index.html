@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StraveX'26 — Invisible Problems. Intelligent Solutions.</title>
+  <meta name="description" content="StraveX'26 is a solution-driven intra-college hackathon organized by the Dept. of AI & DS and ED Cell. 19 March 2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Chart.js for Judging Criteria Pie Chart -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+  <script src="https://kit.fontawesome.com/6729cad1f4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Dynamic Background Canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Scroll Progress Bar -->
+  <div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════ NAVBAR ═══ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo">StraveX'26</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#tracks">Tracks</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#rules">Rules</a></li>
+      <li><a href="#prizes">Prizes</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="#register" class="nav-cta">Register</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#about"      class="mobile-link">About</a>
+    <a href="#tracks"     class="mobile-link">Tracks</a>
+    <a href="#timeline"   class="mobile-link">Timeline</a>
+    <a href="#rules"      class="mobile-link">Rules</a>
+    <a href="#prizes"     class="mobile-link">Prizes</a>
+    <a href="#info"       class="mobile-link">Info</a>
+    <a href="#organizers" class="mobile-link">Organizers</a>
+    <a href="#register"   class="nav-cta mobile-link">Register Now</a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════ 1. HERO ═══ -->
+  <section id="hero">
+    <div class="hero-content">
+
+      <!-- College Logo -->
+      <div class="hero-logo-wrap">
+        <img
+          src="stravex.png"
+          alt="StraveX'26 Logo"
+          class="hero-college-logo"
+        />
+      </div>
+
+      <!-- Organizer text -->
+      <p class="hero-organizer">Department of Artificial Intelligence &amp; Data Science and ED Cell organizes</p>
+
+      <!-- Eyebrow badge -->
+      <div class="hero-eyebrow">Intra-College Technical Hackathon 2026</div>
+
+      <!-- Main title -->
+      <h1 class="hero-title">StraveX'26</h1>
+      <p class="hero-subtitle">Invisible Problems. Intelligent Solutions.</p>
+
+      <!-- Fee + intra-college notice -->
+      <div class="hero-notice-row">
+        <div class="hero-fee-badge">
+          Registration Fee: <span class="hero-fee-highlight">₹200 per TEAM</span>
+        </div>
+        <div class="hero-intra-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Intra-College Hackathon
+        </div>
+      </div>
+
+      <!-- Quick facts -->
+      <div class="hero-highlights">
+        <div class="hero-badge"><span class="icon"><i class="fa-solid fa-calendar"></i></span><span>23 March 2026</span></div>
+        <div class="hero-badge"><span class="icon"><i class="fa-solid fa-alarm-clock"></i></span><span>Reg. Deadline: 21 March</span></div>
+        <div class="hero-badge"><span class="icon"><i class="fa-solid fa-users"></i></span><span>Max 5 Students / Team</span></div>
+        <div class="hero-badge"><span class="icon"><i class="fa-solid fa-door-open"></i></span><span>All Depts Welcome</span></div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-buttons">
+        <a href="#tracks" class="btn btn-primary">
+          View Problem Tracks
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://docs.google.com/presentation/d/1jIcwQ8vXzGBA4OgYlmwI4ASZcQ3EKnYWi-KfasS5jFs/edit?usp=drive_link" class="btn btn-secondary" download aria-label="Download PPT Template">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download PPT Template
+        </a>
+        <a href="#register" class="btn btn-outline">Register Now</a>
+      </div>
+
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      Scroll
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 2. ABOUT ═══ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <span class="section-label fade-up">About the Event</span>
+          <h2 class="section-title fade-up delay-1">About StraveX'26</h2>
+          <div class="divider fade-up delay-1"></div>
+          <p class="about-para fade-up delay-2">
+            StraveX'26 is a solution-driven intra-college technical hackathon organized by the Department of Artificial Intelligence &amp; Data Science and the Entrepreneurship Development Cell. It is designed to identify overlooked system-level challenges and transform them into intelligent, scalable solutions.
+          </p>
+          <p class="about-para fade-up delay-3">
+            Open to all students across departments and all years, this presentation-based hackathon encourages interdisciplinary collaboration, structured innovation, and real-world problem solving. Refreshments, certificates, and prizes await all participants.
+          </p>
+          <div class="about-stats fade-up delay-4">
+            <div class="about-stat"><div class="about-stat-num">5</div><div class="about-stat-label">Problem Tracks</div></div>
+            <div class="about-stat"><div class="about-stat-num">5</div><div class="about-stat-label">Max Team Size</div></div>
+            <div class="about-stat"><div class="about-stat-num">₹200</div><div class="about-stat-label">Entry Fee / Team</div></div>
+            <div class="about-stat"><div class="about-stat-num">All</div><div class="about-stat-label">Years Welcome</div></div>
+          </div>
+        </div>
+        <div class="about-visual fade-in delay-2">
+          <div class="about-visual-inner">
+            <div class="about-ring"></div>
+            <div class="about-ring"></div>
+            <div class="about-ring"></div>
+            <div class="about-center">
+              <div class="about-center-text">STRX<br>'26</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 3. FORMAT ═══ -->
+  <section id="format">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <span class="section-label">How It Works</span>
+        <h2 class="section-title">Hackathon Format</h2>
+        <p class="section-subtitle">A structured, presentation-focused event that rewards research, innovation, and technical thinking.</p>
+      </div>
+      <div class="format-grid">
+        <div class="glass-card format-card fade-up delay-1">
+          <div class="format-icon blue"><i class="fa-solid fa-crosshairs"></i></div>
+          <h3>Solution Presentation-Based</h3>
+          <p>Teams research a real-world problem, develop a structured solution, and present in front of expert judges. Clear communication and analytical thinking are as important as the solution.</p>
+        </div>
+        <div class="glass-card format-card fade-up delay-2">
+          <div class="format-icon purple"><i class="fa-solid fa-chalkboard"></i></div>
+          <h3>PPT Submission Mandatory</h3>
+          <p>All teams must submit a structured PowerPoint presentation using the official StraveX'26 template by 22 March via event email. The PPT forms the basis of evaluation.</p>
+        </div>
+        <div class="glass-card format-card fade-up delay-3">
+          <div class="format-icon cyan"><i class="fa-solid fa-gear"></i></div>
+          <h3>Prototype Optional</h3>
+          <p>Working prototypes are not mandatory but earn <strong class="text-emphasis">extra evaluation weightage</strong>. Teams that build and demonstrate solutions will receive bonus credit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 4. TRACKS ═══ -->
+  <section id="tracks">
+    <div class="container">
+      <span class="section-label fade-up">Problem Domains</span>
+      <h2 class="section-title fade-up delay-1">Hackathon Tracks</h2>
+      <p class="section-subtitle fade-up delay-2">Choose your domain. Each track contains 10 carefully curated problem statements. Click a track to explore all problem statements.</p>
+
+      <div class="tracks-list fade-up delay-3">
+        <a href="campus.html" class="track-item track-item--link">
+          <div class="track-left">
+            <div class="track-num">01</div>
+            <div class="track-info">
+              <h3>Campus Micro-Systems</h3>
+              <span>10 Problem Statements — Operational &amp; logistical campus challenges</span>
+            </div>
+          </div>
+          <div class="track-arrow track-arrow--link" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="renewable.html" class="track-item track-item--link">
+          <div class="track-left">
+            <div class="track-num">02</div>
+            <div class="track-info">
+              <h3>Resource Efficiency &amp; Micro Sustainability</h3>
+              <span>10 Problem Statements — Low-cost sustainable resource solutions</span>
+            </div>
+          </div>
+          <div class="track-arrow track-arrow--link" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="automation.html" class="track-item track-item--link">
+          <div class="track-left">
+            <div class="track-num">03</div>
+            <div class="track-info">
+              <h3>Smart Automation</h3>
+              <span>10 Problem Statements — AI-driven &amp; sensor-based automation systems</span>
+            </div>
+          </div>
+          <div class="track-arrow track-arrow--link" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="education.html" class="track-item track-item--link">
+          <div class="track-left">
+            <div class="track-num">04</div>
+            <div class="track-info">
+              <h3>Smart Education</h3>
+              <span>10 Problem Statements — Personalised, data-driven learning platforms</span>
+            </div>
+          </div>
+          <div class="track-arrow track-arrow--link" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+        <a href="inclusive.html" class="track-item track-item--link">
+          <div class="track-left">
+            <div class="track-num">05</div>
+            <div class="track-info">
+              <h3>Inclusive &amp; Accessible Systems</h3>
+              <span>10 Problem Statements — Empowering individuals with disabilities</span>
+            </div>
+          </div>
+          <div class="track-arrow track-arrow--link" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 5. TIMELINE ═══ -->
+  <section id="timeline">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <span class="section-label">Schedule</span>
+        <h2 class="section-title">Event Timeline</h2>
+      </div>
+      <div class="timeline-wrapper">
+        <div class="timeline-line" id="timelineLine"></div>
+
+        <!-- 16 March -->
+        <div class="timeline-item fade-up delay-1">
+          <div class="timeline-spacer"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-status status-open">Active</span>
+            <div class="timeline-date-chip">21 March 2026</div>
+            <h3>Last Date for Registration</h3>
+            <p class="date">All teams must register and complete payment of ₹200 before this date. Registrations close at midnight.</p>
+          </div>
+        </div>
+
+        <!-- 18 March -->
+        <div class="timeline-item fade-up delay-2">
+          <div class="timeline-card">
+            <span class="timeline-status status-soon">Upcoming</span>
+            <div class="timeline-date-chip">22 March 2026</div>
+            <h3>PPT Submission Deadline</h3>
+            <p class="date">Submit your PPT using the official template to the event email before 11:59 PM. Late submissions will not be accepted.</p>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+        <!-- 19 March -->
+        <div class="timeline-item fade-up delay-3">
+          <div class="timeline-spacer"></div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-status status-main">Main Event</span>
+            <div class="timeline-date-chip">23 March 2026</div>
+            <h3>Hackathon Day</h3>
+            <ul class="timeline-sub-list">
+              <li>All registered teams present to the Jury</li>
+              <li>15 teams shortlisted after Round 1</li>
+              <li>Shortlisted teams present to Chief Guest</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 20 March -->
+        <div class="timeline-item fade-up delay-4">
+          <div class="timeline-card">
+            <span class="timeline-status status-coming">Final</span>
+            <div class="timeline-date-chip">24 March 2026</div>
+            <h3>Result Announcement</h3>
+            <ul class="timeline-sub-list">
+              <li>Top 3 teams awarded</li>
+              <li>Certificates distributed to all participants</li>
+            </ul>
+          </div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-spacer"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 6. RULES ═══ -->
+  <section id="rules">
+    <div class="container">
+      <span class="section-label fade-up">Guidelines</span>
+      <h2 class="section-title fade-up delay-1">Rules &amp; Eligibility</h2>
+
+      <div class="tabs-nav fade-up delay-2" id="tabNav" role="tablist">
+        <button class="tab-btn active" data-tab="eligibility"  role="tab" aria-selected="true">Eligibility</button>
+        <button class="tab-btn"        data-tab="submission"   role="tab" aria-selected="false">Submission</button>
+        <button class="tab-btn"        data-tab="evaluation"   role="tab" aria-selected="false">Evaluation</button>
+        <button class="tab-btn"        data-tab="conduct"      role="tab" aria-selected="false">Code of Conduct</button>
+        <div class="tab-indicator" id="tabIndicator"></div>
+      </div>
+
+      <div class="tab-content active" id="tab-eligibility" role="tabpanel">
+        <ul class="rules-list">
+          <li>Open to all students from any department and any year of study.</li>
+          <li>Maximum of 5 members per team. Solo participation is allowed.</li>
+          <li>Interdisciplinary teams are strongly encouraged.</li>
+          <li>All team members must be currently enrolled students of the institution.</li>
+          <li>Each student may register with only one team. Duplicate registrations will be disqualified.</li>
+          <li>Registration fee of ₹200 per team is mandatory for confirmation.</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="tab-submission" role="tabpanel">
+        <ul class="rules-list">
+          <li>A PPT submission is <strong>mandatory</strong> — teams without it will not be evaluated.</li>
+          <li>Use the official StraveX'26 template. Deviating from the structure will result in score deduction.</li>
+          <li>PPT must be emailed to the event address by 22 March 2026, 11:59 PM.</li>
+          <li>Prototype or demo is optional but earns extra evaluation weightage.</li>
+          <li>Late submissions will not be accepted under any circumstances.</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="tab-evaluation" role="tabpanel">
+        <div class="eval-grid">
+          <div class="eval-card"><div class="eval-pct">20%</div><div class="eval-label">Innovation</div></div>
+          <div class="eval-card"><div class="eval-pct">20%</div><div class="eval-label">Technical Feasibility</div></div>
+          <div class="eval-card"><div class="eval-pct">20%</div><div class="eval-label">Impact</div></div>
+          <div class="eval-card"><div class="eval-pct">20%</div><div class="eval-label">Scalability</div></div>
+          <div class="eval-card"><div class="eval-pct">20%</div><div class="eval-label">Presentation Quality</div></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-conduct" role="tabpanel">
+        <div class="conduct-text">
+          <p>All participants must maintain professional and respectful conduct throughout the event. Plagiarism, dishonesty, or misrepresentation will lead to immediate disqualification.</p>
+          <p>Teams must present original ideas. Recycled or previously submitted projects are ineligible. AI tools may assist research but cannot generate the full solution.</p>
+          <p>Judges' and organizing committee decisions are final. Disputes must be raised with the faculty coordinator before results are announced.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 7. JUDGING ═══ -->
+  <section id="judging">
+    <div class="container">
+      <div class="judging-grid">
+        <div>
+          <span class="section-label fade-up">Evaluation</span>
+          <h2 class="section-title fade-up delay-1">Judging Criteria</h2>
+          <p class="judging-intro fade-up delay-2">Each submission is evaluated across five equally-weighted dimensions by a panel of expert judges. Aim for excellence in every area.</p>
+          <ul class="judging-legend fade-up delay-3">
+            <li><span class="legend-dot" data-idx="0"></span>Innovation</li>
+            <li><span class="legend-dot" data-idx="1"></span>Technical Feasibility</li>
+            <li><span class="legend-dot" data-idx="2"></span>Impact</li>
+            <li><span class="legend-dot" data-idx="3"></span>Scalability</li>
+            <li><span class="legend-dot" data-idx="4"></span>Presentation Quality</li>
+          </ul>
+        </div>
+        <div class="judging-chart-wrap fade-up delay-2">
+          <canvas id="judgingChart" aria-label="Judging criteria pie chart — each criterion 20%"></canvas>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 8. PRIZES ═══ -->
+  <section id="prizes">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <span class="section-label">Awards</span>
+        <h2 class="section-title">Prize Pool</h2>
+        <p class="section-subtitle">Top teams will be recognized and rewarded for their innovation and effort.</p>
+      </div>
+      <div class="prizes-grid fade-up delay-3">
+        <div class="glass-card prize-card silver">
+          <div class="prize-emoji">🥈</div>
+          <div class="prize-rank">Second Prize</div>
+          <div class="prize-amount">₹ 3000</div>
+          <div class="prize-sub">1st Runner-Up</div>
+        </div>
+        <div class="glass-card prize-card gold">
+          <div class="prize-emoji">🥇</div>
+          <div class="prize-rank">First Prize</div>
+          <div class="prize-amount">₹ 5000</div>
+          <div class="prize-sub">Overall Winner</div>
+        </div>
+        <div class="glass-card prize-card bronze">
+          <div class="prize-emoji">🥉</div>
+          <div class="prize-rank">Third Prize</div>
+          <div class="prize-amount">₹ 2000</div>
+          <div class="prize-sub">2nd Runner-Up</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 9. ADDITIONAL INFO ═══ -->
+  <section id="info">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <span class="section-label">Participant Benefits</span>
+        <h2 class="section-title">What You Get</h2>
+        <p class="section-subtitle">Every participant at StraveX'26 is taken care of — from arrival to award.</p>
+      </div>
+      <div class="info-grid fade-up delay-2">
+        <div class="info-card">
+          <div class="info-card-icon"><i class="fa-solid fa-bowl-food"></i></div>
+          <h3 class="info-card-title">Refreshments &amp; Food</h3>
+          <p class="info-card-desc">Complimentary refreshments and food will be provided to all participants throughout the hackathon day.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon"><i class="fa-solid fa-stamp"></i></div>
+          <h3 class="info-card-title">Participation Certificates</h3>
+          <p class="info-card-desc">Every participant who registers and attends will receive an official participation certificate from the department.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon"><i class="fa-solid fa-door-open"></i></div>
+          <h3 class="info-card-title">All Departments Welcome</h3>
+          <p class="info-card-desc">Open to students from all departments and all years of study. Interdisciplinary teams are strongly encouraged.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon"><i class="fa-solid fa-award"></i></div>
+          <h3 class="info-card-title">Cash Prizes &amp; Recognition</h3>
+          <p class="info-card-desc">Top 3 teams receive cash prizes and are felicitated in the presence of the Chief Guest on results day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 10. ORGANIZERS ═══ -->
+  <section id="organizers">
+    <div class="container">
+      <div class="section-header-center fade-up">
+        <span class="section-label">Organized By</span>
+      </div>
+      <h2 class="dept-heading fade-up delay-1">DEPARTMENT OF ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</h2>
+      <p class="dept-sub fade-up delay-2">In association with the Entrepreneurship Development Cell — Meenakshi College of Engineering, K.K.Nagar.</p>
+
+      <div class="org-row fade-up delay-2">
+        <div class="org-section-title">Faculty Coordinators</div>
+        <div class="org-cards">
+          <div class="org-card"><div class="org-avatar">FC</div><div><div class="org-name">Mrs. M. Divya</div><div class="org-role">Faculty Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">FC</div><div><div class="org-name">Dr. E. Hemavathi</div><div class="org-role">Faculty Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">FC</div><div><div class="org-name">Mrs. M. Abirami</div><div class="org-role">Faculty Coordinator</div></div></div>
+        </div>
+      </div>
+
+      <div class="org-row fade-up delay-3">
+        <div class="org-section-title">Student Coordinators</div>
+        <div class="org-cards">
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Soundarya S K</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Roshini N</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Sandhya L</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Dharshaa A</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Kasthuri S</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Hemamalathi</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Ganga</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Yuvedhi</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Pavithra</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Roshini B</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Rubika</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Fathima</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Rahul</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Akash</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Sahasra</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Reeshab</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Sanjeev Surya A G</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Sugumaran</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Mohan Raj</div><div class="org-role">Student Coordinator</div></div></div>
+          <div class="org-card"><div class="org-avatar">SC</div><div><div class="org-name">Harish</div><div class="org-role">Student Coordinator</div></div></div>
+        </div>
+      </div>
+
+      <div class="fade-up delay-4">
+        <div class="org-section-title">Venue</div>
+        <div class="venue-card">
+          <div class="venue-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div><div class="venue-label">Location</div><div class="venue-value">To Be Announced</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ 11. REGISTER ═══ -->
+  <section id="register">
+    <div class="container">
+      <div class="register-wrapper">
+
+        <!-- Left info -->
+        <div>
+          <span class="section-label fade-up">Join the Hackathon</span>
+          <h2 class="section-title fade-up delay-1">Register Your Team</h2>
+          <p class="about-para fade-up delay-2">
+            Fill in your team details below to secure your spot at StraveX'26. Open to all students — just pay ₹200 per team to confirm your registration.
+          </p>
+
+          <!-- Payment notice -->
+          <div class="payment-notice fade-up delay-3" role="alert">
+            <div class="payment-notice-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <div class="payment-notice-title">Payment Required for Confirmation</div>
+              <p class="payment-notice-body">Registration will only be confirmed after payment of <strong>₹200 per TEAM</strong>. Failure to complete payment will result in cancellation and disregard of registration.</p>
+              <a href="https://forms.gle/fXHWyJsQ7CgsCEqk6"
+                 class="payment-link-btn" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                Pay Registration Fee →
+              </a>
+            </div>
+          </div>
+
+          <div class="reg-perks fade-up delay-4">
+            <div class="reg-perk">Open to all departments and all years.</div>
+            <div class="reg-perk">Up to 5 members per team.</div>
+            <div class="reg-perk">Confirmation email sent after payment verified.</div>
+            <div class="reg-perk">Unique Team ID generated for event-day tracking.</div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="fade-up delay-2">
+          <form id="registrationForm" action="/register" method="POST" novalidate>
+            <div class="reg-form-card">
+
+              <div class="form-section-title">Team Information</div>
+              <div class="form-group" id="grp-team_name">
+                <label for="team_name">Team Name <span class="req">*</span></label>
+                <input type="text" id="team_name" name="team_name" class="form-control" placeholder="e.g. Project Phoenix" required autocomplete="off" />
+                <span class="field-error" id="err-team_name">Team name is required.</span>
+              </div>
+              <div class="form-row">
+                <div class="form-group" id="grp-track">
+                  <label for="track">Problem Track <span class="req">*</span></label>
+                  <select id="track" name="track" class="form-control" required>
+                    <option value="" disabled selected>Select a track</option>
+                    <option value="campus-micro-systems">Campus Micro-Systems</option>
+                    <option value="resource-efficiency">Resource Efficiency &amp; Micro Sustainability</option>
+                    <option value="smart-automation">Smart Automation</option>
+                    <option value="smart-education">Smart Education</option>
+                    <option value="inclusive-accessible">Inclusive &amp; Accessible Systems</option>
+                  </select>
+                  <span class="field-error" id="err-track">Please select a track.</span>
+                </div>
+                <div class="form-group" id="grp-team_size">
+                  <label for="team_size">Team Size <span class="req">*</span></label>
+                  <input type="number" id="team_size" name="team_size" class="form-control" placeholder="1–5" min="1" max="5" required />
+                  <span class="field-error" id="err-team_size">Enter a valid team size (1–5).</span>
+                </div>
+              </div>
+
+              <div class="form-section-title">Team Lead Details</div>
+              <div class="form-group" id="grp-lead_name">
+                <label for="lead_name">Lead Name <span class="req">*</span></label>
+                <input type="text" id="lead_name" name="lead_name" class="form-control" placeholder="Full name" required autocomplete="name" />
+                <span class="field-error" id="err-lead_name">Lead name is required.</span>
+              </div>
+              <div class="form-row">
+                <div class="form-group" id="grp-lead_email">
+                  <label for="lead_email">Lead Email <span class="req">*</span></label>
+                  <input type="email" id="lead_email" name="lead_email" class="form-control" placeholder="email@example.com" required autocomplete="email" />
+                  <span class="field-error" id="err-lead_email">Enter a valid email address.</span>
+                </div>
+                <div class="form-group" id="grp-lead_phone">
+                  <label for="lead_phone">Lead Phone <span class="req">*</span></label>
+                  <input type="tel" id="lead_phone" name="lead_phone" class="form-control" placeholder="10-digit number" required autocomplete="tel" maxlength="10" inputmode="numeric" />
+                  <span class="field-error" id="err-lead_phone">Enter a valid 10-digit phone number.</span>
+                </div>
+              </div>
+
+              <div class="form-section-title">
+                Additional Team Members
+                <span class="form-section-sub">(max 4)</span>
+              </div>
+              <div class="members-container" id="membersContainer"></div>
+              <button type="button" class="btn-add-member" id="addMemberBtn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                Add Team Member
+              </button>
+              <span class="field-error" id="err-members" style="margin-top:0.5rem;"></span>
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <span id="submitText">Register Team →</span>
+                <span id="submitLoading" style="display:none;">Registering…</span>
+              </button>
+            </div>
+          </form>
+
+          <div id="successCard">
+            <div class="success-icon">✓</div>
+            <h3 class="success-title">Registration Submitted!</h3>
+            <p class="success-msg">Your team details have been received. Please complete the ₹200 payment to confirm your registration. A confirmation will be sent to the team lead's email.</p>
+            <div class="team-id-badge" id="teamIdDisplay">—</div>
+            <div class="team-id-label">Your Team ID</div>
+            <p class="success-note">Keep this ID safe — you'll need it on hackathon day.</p>
+            <a href="#" class="payment-link-btn payment-link-btn--success">Complete Payment →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">StraveX'26</div>
+          <div class="dept">Department of Artificial Intelligence and Data Science &amp; ED Cell<br>Meenakshi College of Engineering, K.K.Nagar</div>
+          <div class="tagline">Invisible Problems. Intelligent Solutions.</div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#format">Format</a></li>
+            <li><a href="#tracks">Tracks</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#info">Info</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tracks</h4>
+          <ul>
+            <li><a href="campus.html">Campus Micro-Systems</a></li>
+            <li><a href="renewable.html">Resource Efficiency</a></li>
+            <li><a href="automation.html">Smart Automation</a></li>
+            <li><a href="education.html">Smart Education</a></li>
+            <li><a href="inclusive.html">Inclusive Systems</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 StraveX — Dept. of AI &amp; DS, Meenakshi College of Engineering</p>
+        <div class="email"><a href="mailto:contact@stravex26.example.com">contact@stravex26.example.com</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

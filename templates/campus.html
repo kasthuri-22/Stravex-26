@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Micro-Systems — StraveX'26</title>
+  <meta name="description" content="Campus Micro-Systems track problem statements for StraveX'26 hackathon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">StraveX'26</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#tracks" class="active">Tracks</a></li>
+      <li><a href="index.html#timeline">Timeline</a></li>
+      <li><a href="index.html#rules">Rules</a></li>
+      <li><a href="index.html#prizes">Prizes</a></li>
+      <li><a href="index.html#register" class="nav-cta">Register</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="index.html#tracks" class="mobile-link">Tracks</a>
+    <a href="index.html#timeline" class="mobile-link">Timeline</a>
+    <a href="index.html#rules" class="mobile-link">Rules</a>
+    <a href="index.html#prizes" class="mobile-link">Prizes</a>
+    <a href="index.html#register" class="nav-cta mobile-link">Register Now</a>
+  </nav>
+
+  <section class="track-hero " id="track-hero">
+    <div class="track-hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <a href="index.html#tracks" class="track-back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to All Tracks
+      </a>
+      <div class="track-hero-content">
+        <div class="track-number-badge">Track 01</div>
+        <h1 class="track-hero-title">Campus Micro-Systems</h1>
+        <p class="track-hero-subtitle">Identifying and solving overlooked operational, logistical, and convenience challenges on a college campus.</p>
+        <div class="track-meta-row">
+          <div class="track-meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            10 Problem Statements
+          </div>
+          <div class="track-meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Max 5 Members
+          </div>
+          <div class="track-meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            19 March 2026
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-section">
+    <div class="container">
+      <div class="ps-header fade-up">
+        <span class="section-label">Problem Statements</span>
+        <h2 class="section-title">Choose Your Challenge</h2>
+        <p class="section-subtitle">Read each problem carefully and build an intelligent, feasible solution.</p>
+      </div>
+      <div class="ps-grid">
+
+        <div class="ps-card fade-up delay-1">
+          <div class="ps-card-header">
+            <div class="ps-number">01</div>
+            <div class="ps-tag">Library / Search</div>
+          </div>
+          <h3 class="ps-title">Library Book Search and Availability System</h3>
+          <p class="ps-body">In many college libraries, students spend a lot of time manually searching for books. Sometimes books are unavailable, misplaced, or already issued, which causes confusion and time wastage.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Develop a simple application that allows users to search books and check their availability status.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-2">
+          <div class="ps-card-header">
+            <div class="ps-number">02</div>
+            <div class="ps-tag">Energy / Monitoring</div>
+          </div>
+          <h3 class="ps-title">Electricity Consumption Monitoring System</h3>
+          <p class="ps-body">Colleges often record electricity consumption manually without proper tracking or analysis. This makes it difficult to monitor monthly usage and identify areas of excessive power consumption.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Design a system where daily electricity meter readings can be entered manually and monthly consumption can be monitored using charts.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-3">
+          <div class="ps-card-header">
+            <div class="ps-number">03</div>
+            <div class="ps-tag">Transport / Tracking</div>
+          </div>
+          <h3 class="ps-title">College Bus Tracking System</h3>
+          <p class="ps-body">Students often wait for college buses without knowing the exact arrival time or current location. This leads to unnecessary waiting and inconvenience.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Develop a simple system where the bus driver can update the current location/status, and students can view it in real time.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-1">
+          <div class="ps-card-header">
+            <div class="ps-number">04</div>
+            <div class="ps-tag">Scheduling / Reminders</div>
+          </div>
+          <h3 class="ps-title">Smart Timetable and Reminder Application</h3>
+          <p class="ps-body">Students sometimes miss classes or forget schedule changes due to lack of proper reminders. Printed timetables are not dynamic and do not provide notifications.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Build an application that displays the class timetable and sends reminders for upcoming classes.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-2">
+          <div class="ps-card-header">
+            <div class="ps-number">05</div>
+            <div class="ps-tag">Lost &amp; Found</div>
+          </div>
+          <h3 class="ps-title">Lost and Found Management Portal</h3>
+          <p class="ps-body">When students lose personal belongings on campus, there is no centralized system to report or search for lost items. This reduces the chances of recovery.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Create an online portal where students can report lost or found items and search for matching entries.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-3">
+          <div class="ps-card-header">
+            <div class="ps-number">06</div>
+            <div class="ps-tag">Infrastructure / Parking</div>
+          </div>
+          <h3 class="ps-title">Smart Parking Slot Management System</h3>
+          <p class="ps-body">Students and staff face difficulty finding available parking spaces inside the campus, leading to congestion and time loss. There is no system to display parking availability.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Develop a basic system that displays available and occupied parking slots in real time (manual update version).</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-1">
+          <div class="ps-card-header">
+            <div class="ps-number">07</div>
+            <div class="ps-tag">Canteen / Pre-Order</div>
+          </div>
+          <h3 class="ps-title">Digital Canteen Pre-Order System</h3>
+          <p class="ps-body">During break times, long queues form in the college canteen, causing delays and inconvenience. There is no system for advance ordering.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Design a web or mobile-based system that allows students to view the menu, place pre-orders, and receive a token number for pickup.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-2">
+          <div class="ps-card-header">
+            <div class="ps-number">08</div>
+            <div class="ps-tag">Administration / Complaints</div>
+          </div>
+          <h3 class="ps-title">Online Complaint Management System</h3>
+          <p class="ps-body">Students face issues related to infrastructure, facilities, or academics but often do not have a proper channel to register and track complaints. Manual complaint systems lack transparency.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Create a centralized digital platform where students can submit complaints and track their status, and administrators can manage and update them.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-3">
+          <div class="ps-card-header">
+            <div class="ps-number">09</div>
+            <div class="ps-tag">Examination / Allocation</div>
+          </div>
+          <h3 class="ps-title">Automatic Classroom and Seat Allocation System</h3>
+          <p class="ps-body">Classroom and seating arrangements are often done manually, especially during exams, which can lead to confusion and errors.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Develop a simple application that automatically assigns students to classrooms and seats using their register numbers or department details.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-1">
+          <div class="ps-card-header">
+            <div class="ps-number">10</div>
+            <div class="ps-tag">Academic / Peer Support</div>
+          </div>
+          <h3 class="ps-title">Peer Learning Support Platform</h3>
+          <p class="ps-body">Many students struggle in certain subjects but hesitate to ask for help. There is no structured platform in the campus to connect students who need academic support with those who can provide it.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Develop a platform where students can list the subjects or topics they need help with and connect with peers who are willing to assist them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-section" style="padding-top:0;padding-bottom:5rem;">
+    <div class="container">
+      <div class="ps-cta fade-up">
+        <div class="ps-cta-inner">
+          <h3>Ready to solve this challenge?</h3>
+          <p>Register your team, select this track and pay ₹200 to confirm. All departments and years welcome.</p>
+          <a href="index.html#register" class="btn btn-primary">
+            Register Now
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="other-tracks-section">
+    <div class="container">
+      <span class="section-label fade-up">Explore More</span>
+      <h2 class="section-title fade-up delay-1">Other Tracks</h2>
+      <div class="other-tracks-grid fade-up delay-2">
+        <a href="renewable.html" class="other-track-card">
+          <div class="otc-num">02</div>
+          <div class="otc-info"><div class="otc-title">Resource Efficiency &amp; Micro Sustainability</div><div class="otc-count">10 Problems</div></div>
+          <svg class="otc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="automation.html" class="other-track-card">
+          <div class="otc-num">03</div>
+          <div class="otc-info"><div class="otc-title">Smart Automation</div><div class="otc-count">10 Problems</div></div>
+          <svg class="otc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="education.html" class="other-track-card">
+          <div class="otc-num">04</div>
+          <div class="otc-info"><div class="otc-title">Smart Education</div><div class="otc-count">10 Problems</div></div>
+          <svg class="otc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="inclusive.html" class="other-track-card">
+          <div class="otc-num">05</div>
+          <div class="otc-info"><div class="otc-title">Inclusive &amp; Accessible Systems</div><div class="otc-count">10 Problems</div></div>
+          <svg class="otc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">StraveX'26</div>
+          <div class="dept">Department of Artificial Intelligence and Data Science &amp; ED Cell<br>Meenakshi College of Engineering, K.K.Nagar</div>
+          <div class="tagline">Invisible Problems. Intelligent Solutions.</div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#tracks">Tracks</a></li>
+            <li><a href="index.html#timeline">Timeline</a></li>
+            <li><a href="index.html#prizes">Prizes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tracks</h4>
+          <ul>
+            <li><a href="campus.html">Campus Micro-Systems</a></li>
+            <li><a href="renewable.html">Resource Efficiency</a></li>
+            <li><a href="automation.html">Smart Automation</a></li>
+            <li><a href="education.html">Smart Education</a></li>
+            <li><a href="inclusive.html">Inclusive Systems</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 StraveX — Dept. of AI &amp; DS, Meenakshi College of Engineering</p>
+        <div class="email"><a href="mailto:contact@stravex26.example.com">contact@stravex26.example.com</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

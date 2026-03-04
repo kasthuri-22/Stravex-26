@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inclusive &amp; Accessible Systems — StraveX'26</title>
+  <meta name="description" content="Inclusive &amp; Accessible Systems track problem statements for StraveX'26 hackathon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo">StraveX'26</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#tracks" class="active">Tracks</a></li>
+      <li><a href="index.html#timeline">Timeline</a></li>
+      <li><a href="index.html#rules">Rules</a></li>
+      <li><a href="index.html#prizes">Prizes</a></li>
+      <li><a href="index.html#register" class="nav-cta">Register</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html#about" class="mobile-link">About</a>
+    <a href="index.html#tracks" class="mobile-link">Tracks</a>
+    <a href="index.html#timeline" class="mobile-link">Timeline</a>
+    <a href="index.html#rules" class="mobile-link">Rules</a>
+    <a href="index.html#prizes" class="mobile-link">Prizes</a>
+    <a href="index.html#register" class="nav-cta mobile-link">Register Now</a>
+  </nav>
+
+  <section class="track-hero track-hero--amber" id="track-hero">
+    <div class="track-hero-bg" aria-hidden="true"></div>
+    <div class="container">
+      <a href="index.html#tracks" class="track-back-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to All Tracks
+      </a>
+      <div class="track-hero-content">
+        <div class="track-number-badge">Track 05</div>
+        <h1 class="track-hero-title">Inclusive &amp; Accessible Systems</h1>
+        <p class="track-hero-subtitle">Engineering low-cost, human-centred solutions that empower individuals with disabilities.</p>
+        <div class="track-meta-row">
+          <div class="track-meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            10 Problem Statements
+          </div>
+          <div class="track-meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Max 5 Members
+          </div>
+          <div class="track-meta-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            19 March 2026
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-section">
+    <div class="container">
+      <div class="ps-header fade-up">
+        <span class="section-label">Problem Statements</span>
+        <h2 class="section-title">Choose Your Challenge</h2>
+        <p class="section-subtitle">Design for empathy — build systems that make the world more accessible for everyone.</p>
+      </div>
+      <div class="ps-grid">
+
+        <div class="ps-card fade-up delay-1">
+          <div class="ps-card-header">
+            <div class="ps-number">01</div>
+            <div class="ps-tag">Assistive AI</div>
+          </div>
+          <h3 class="ps-title">Real-Time Sign Language Translation Platform</h3>
+          <p class="ps-body">Many deaf and hard-of-hearing individuals face communication barriers during live conversations. There is a lack of accessible, real-time systems that seamlessly translate sign language into spoken language and text, and vice versa.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Create a real-time AI-powered platform that recognizes sign language through vision-based models and converts it into text or speech, while also translating spoken language into sign language during live interactions.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-2">
+          <div class="ps-card-header">
+            <div class="ps-number">02</div>
+            <div class="ps-tag">Smart Accessibility</div>
+          </div>
+          <h3 class="ps-title">Indoor Navigation Assistance System</h3>
+          <p class="ps-body">Visually impaired individuals often struggle to navigate complex indoor environments such as colleges, hospitals, and public buildings due to the absence of structured guidance systems.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Develop an intelligent indoor navigation system using computer vision, Bluetooth beacons, or ultrasonic sensors that delivers real-time audio guidance and obstacle awareness for visually impaired users.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-3">
+          <div class="ps-card-header">
+            <div class="ps-number">03</div>
+            <div class="ps-tag">Inclusive Learning</div>
+          </div>
+          <h3 class="ps-title">Physically Optimized Classroom Design</h3>
+          <p class="ps-body">Students with dyslexia, ADHD, or autism often experience difficulty concentrating in conventional classroom environments that lack sensory and structural accommodations.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Design a physically optimized classroom environment that integrates adaptive lighting, improved acoustics, flexible seating arrangements, and sensory regulation zones to enhance focus, comfort, and learning outcomes.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-1">
+          <div class="ps-card-header">
+            <div class="ps-number">04</div>
+            <div class="ps-tag">Secure Assistive Voting</div>
+          </div>
+          <h3 class="ps-title">Independent Digital Voting Interface</h3>
+          <p class="ps-body">Many individuals with physical or sensory disabilities face challenges in casting votes independently and privately due to inaccessible voting mechanisms.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Engineer a secure, voice-assisted and gesture-controlled digital voting interface that ensures full independence, privacy, and accessibility during the voting process.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-2">
+          <div class="ps-card-header">
+            <div class="ps-number">05</div>
+            <div class="ps-tag">Mental Health Accessibility</div>
+          </div>
+          <h3 class="ps-title">AAC-Based Emotional Support Companion</h3>
+          <p class="ps-body">Individuals with speech or motor impairments often find it difficult to express emotions or seek help, limiting their access to mental health support.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Implement an AAC-based mental health companion application that utilizes symbol boards, eye-tracking, or switch access to help users communicate emotions and receive personalized support.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-3">
+          <div class="ps-card-header">
+            <div class="ps-number">06</div>
+            <div class="ps-tag">Affordable Mobility</div>
+          </div>
+          <h3 class="ps-title">Low-Cost Assistive Mobility Device</h3>
+          <p class="ps-body">Mobility-impaired students face challenges navigating uneven terrains, staircases, and narrow corridors within campus environments due to limited affordable assistive solutions.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Innovate a low-cost, manually operable assistive device or wheelchair attachment that enhances independent mobility across uneven surfaces, stairs, and confined spaces.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-1">
+          <div class="ps-card-header">
+            <div class="ps-number">07</div>
+            <div class="ps-tag">Inclusive Career</div>
+          </div>
+          <h3 class="ps-title">Fully Accessible Hiring System</h3>
+          <p class="ps-body">Job seekers with disabilities often encounter barriers in digital hiring processes due to non-adaptive interfaces and limited assessment formats.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Develop a fully accessible hiring platform that integrates adaptive user interfaces, AI-powered interview tools supporting text, sign language, and voice formats, along with disability-inclusive skill assessments.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-2">
+          <div class="ps-card-header">
+            <div class="ps-number">08</div>
+            <div class="ps-tag">Emergency Preparedness</div>
+          </div>
+          <h3 class="ps-title">Disability-Centered Evacuation Framework</h3>
+          <p class="ps-body">Emergency evacuation systems in public buildings are often not designed to accommodate individuals with physical or sensory disabilities.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Formulate a structural and mechanical emergency evacuation plan incorporating evacuation chairs, tactile floor guides, vibration-based alert panels, and other physical aids to ensure safe evacuation for disabled individuals.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-3">
+          <div class="ps-card-header">
+            <div class="ps-number">09</div>
+            <div class="ps-tag">Accessible Medical Comm.</div>
+          </div>
+          <h3 class="ps-title">Real-Time Medical Document Simplification System</h3>
+          <p class="ps-body">Medical documents are often complex and difficult to understand, creating barriers to informed consent for individuals with cognitive, linguistic, or sensory challenges.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Design a system that transforms medical documents into plain language, audio formats, pictograms, or regional languages in real time to ensure accessible understanding and informed decision-making.</p>
+          </div>
+        </div>
+        <div class="ps-card fade-up delay-1">
+          <div class="ps-card-header">
+            <div class="ps-number">10</div>
+            <div class="ps-tag">Public Transport</div>
+          </div>
+          <h3 class="ps-title">Retrofittable Inclusive Transport Infrastructure</h3>
+          <p class="ps-body">Public transport systems frequently lack affordable and easily implementable accessibility solutions, restricting mobility for disabled individuals.</p>
+          <div class="ps-problem-statement">
+            <div class="ps-ps-label">Problem Statement</div>
+            <p>Revolutionize public transport accessibility by designing low-cost ramp systems, tactile pathways, and ergonomic boarding aids that can be retrofitted into existing buses and train stations without major structural reconstruction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ps-section" style="padding-top:0;padding-bottom:5rem;">
+    <div class="container">
+      <div class="ps-cta fade-up">
+        <div class="ps-cta-inner">
+          <h3>Ready to solve this challenge?</h3>
+          <p>Register your team, select this track and pay ₹200 to confirm. All departments and years welcome.</p>
+          <a href="index.html#register" class="btn btn-primary">
+            Register Now
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="other-tracks-section">
+    <div class="container">
+      <span class="section-label fade-up">Explore More</span>
+      <h2 class="section-title fade-up delay-1">Other Tracks</h2>
+      <div class="other-tracks-grid fade-up delay-2">
+        <a href="campus.html" class="other-track-card">
+          <div class="otc-num">01</div>
+          <div class="otc-info"><div class="otc-title">Campus Micro-Systems</div><div class="otc-count">10 Problems</div></div>
+          <svg class="otc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="renewable.html" class="other-track-card">
+          <div class="otc-num">02</div>
+          <div class="otc-info"><div class="otc-title">Resource Efficiency &amp; Micro Sustainability</div><div class="otc-count">10 Problems</div></div>
+          <svg class="otc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="automation.html" class="other-track-card">
+          <div class="otc-num">03</div>
+          <div class="otc-info"><div class="otc-title">Smart Automation</div><div class="otc-count">10 Problems</div></div>
+          <svg class="otc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="education.html" class="other-track-card">
+          <div class="otc-num">04</div>
+          <div class="otc-info"><div class="otc-title">Smart Education</div><div class="otc-count">10 Problems</div></div>
+          <svg class="otc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">StraveX'26</div>
+          <div class="dept">Department of Artificial Intelligence and Data Science &amp; ED Cell<br>Meenakshi College of Engineering, K.K.Nagar</div>
+          <div class="tagline">Invisible Problems. Intelligent Solutions.</div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#tracks">Tracks</a></li>
+            <li><a href="index.html#timeline">Timeline</a></li>
+            <li><a href="index.html#prizes">Prizes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tracks</h4>
+          <ul>
+            <li><a href="campus.html">Campus Micro-Systems</a></li>
+            <li><a href="renewable.html">Resource Efficiency</a></li>
+            <li><a href="automation.html">Smart Automation</a></li>
+            <li><a href="education.html">Smart Education</a></li>
+            <li><a href="inclusive.html">Inclusive Systems</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 StraveX — Dept. of AI &amp; DS, Meenakshi College of Engineering</p>
+        <div class="email"><a href="mailto:contact@stravex26.example.com">contact@stravex26.example.com</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
