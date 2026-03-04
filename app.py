@@ -15,11 +15,35 @@ from datetime import datetime, timezone
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/automation")
+def automation():
+    return render_template("automation.html")
+
+@app.route("/campus")
+def campus():
+    return render_template("campus.html")
+
+@app.route("/education")
+def education():
+    return render_template("education.html")
+
+@app.route("/inclusive")
+def inclusive():
+    return render_template("inclusive.html")
+
+@app.route("/renewable")
+def renewable():
+    return render_template("renewable.html")
 
 # ── Configuration ──────────────────────────────────────────────────────────────
 CSV_FILE = "registrations.csv"
